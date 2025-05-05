@@ -1,0 +1,380 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444;
+    background-color: #0a2a3d;
+    line-height: 1.6;
+}
+
+/* Header Styling with Circuit Background and Profile Photo */
+header {
+    background: url("../Images/AboutMe.jpg") no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 4em 2em;
+    position: relative;
+    text-align: center;
+}
+
+/* Overlay Effect */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.6); /* Blue overlay */
+    z-index: 1;
+}
+
+/* Content Alignment */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 1em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Intro Text Styling */
+.intro-text h1 {
+    font-size: 2.5em;
+    margin: 0.2em 0;
+}
+
+.intro-text p {
+    font-size: 2em;
+    margin: 0.2em 0 1em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Adjust Navigation Links on Hover */
+header nav a:hover {
+    color: #a6d1ff; /* Light blue shade on hover */
+}
+
+section {
+    padding: 4em 2em;
+    font-size: 1.2em;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    /*max-width: 900px;*/
+    margin: 0 auto;
+    background-color: #fff; /* White background for sections to stand out */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.8em;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.job, .project, .education-item, .certification {
+    margin-bottom: 2em;
+    background-color: #ecf0f1;
+    padding: 1.2em;
+    border-left: 5px solid #3498db; /* Blue accent for each item */
+    border-radius: 8px;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 1.8em;
+    color: #7f8c8d; /* Soft grey for list text */
+}
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 1em;
+    border-top: 2px solid #3498db; /* Blue accent for footer separation */
+}
+
+a {
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9; /* Darker blue on hover */
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.7); /* Focused button glow */
+}
+/* Style for the contact icons */
+#contact a {
+    color: inherit; /* Use the text color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 15px; /* Add spacing between icons */
+    font-size: 20px; /* Adjust icon size */
+}
+
+#contact a:hover {
+    color: #0077b5; /* Change color when hovering over the icons (LinkedIn Blue) */
+}
+
+#contact i {
+    margin-right: 8px; /* Space between the icon and text */
+}
+/* Profile Image Styling */
+.profile-image {
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits well in the circle */
+    margin-bottom: 10px;
+    margin-right: 20px; /* Adds space between the image and text */
+    display: inline-block; /* Ensures it sits next to the text */
+}
+
+/* General container alignment */
+.logo {
+    width: 70px; /* Increased width for better visibility */
+    height: auto;
+    margin-right: 20px; /* More space between logo and text */
+    object-fit: contain; /* Maintains logo aspect ratio */
+    border-radius: 5px; /* Optional: adds a subtle rounded edge */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for emphasis */
+}
+
+/* Alignment adjustments for text beside logo */
+.experience-item, .education-details {
+    display: flex;
+    align-items: center; /* Ensures content aligns vertically with larger logo */
+    margin-bottom: 1.8em; /* Adjusted spacing between entries */
+}
+
+/* Experience and Education section text */
+.job h3, .education-item h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.job p, .education-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.job ul, .education-item ul {
+    margin-top: 0.5em;
+    padding-left: 1em;
+    list-style-type: disc;
+}
+
+
+#contact {
+    padding: 2em 1em;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+form {
+    background: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #007acc;
+    color: white;
+    padding: 0.75em 2em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+.indented {
+    text-indent: 2em; /* Adjust "2em" to control the size of the indentation */
+}
+
+/* General styling for the section */
+#projects {
+    padding: 3em 1em;
+    background-color: #0a2a3d; /* Dark background color */
+    color: #fff;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2em;
+    color: #fff; /* Bright title color */
+    margin-bottom: 1.5em;
+}
+
+/* Styling for each project */
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    /*max-width: 1000px;*/
+    margin: 2em auto;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #09202c;
+    color: #fff;
+}
+
+.project-details {
+    flex: 1;
+    padding: 1em;
+}
+
+.project-details h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.project-details p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.project-details h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1em;
+    color: #e53e3e;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-details ul li {
+    font-size: 1em;
+    margin: 0.2em 0;
+}
+
+.view-project-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.6em 1.2em;
+    color: #e53e3e;
+    border: 1px solid #e53e3e;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-project-button:hover {
+    background-color: #e53e3e;
+    color: #fff;
+}
+
+/* Image Styling */
+.project-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
