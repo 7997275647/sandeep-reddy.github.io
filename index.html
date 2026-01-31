@@ -1,404 +1,580 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandeep Reddy Modugu | Embedded Systems Enthusiast</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sandeep Reddy Modugu | Embedded Systems Enthusiast</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#06b6d4", // Vibrant Cyan for that high-tech feel
+              "background-light": "#f8fafc",
+              "background-dark": "#020617", // Deep Navy/Black
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .circuit-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(6, 182, 212, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tech-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.3);
+        }
+    </style>
 </head>
-<body>
-
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <img src="Images/profile_picture.jpg" alt="Profile Photo" class="profile-photo">
-            <div class="intro-text">
-                <h1>Sandeep Reddy Modugu</h1>
-                <p>Embedded Systems Enthusiast</p>
-                <p>Passionate about designing and developing embedded software solutions.</p>
-                <nav>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p class="indented">I'm Sandeep Reddy Modugu, an <strong>Embedded Systems</strong> enthusiast with a keen interest in designing and developing innovative embedded software solutions. Currently pursuing my Master of Science in Embedded Systems at the <strong>Technical University of Chemnitz</strong>, I bring hands-on experience from roles at <strong>Seleon GmbH</strong> and <strong>Honeywell Elster GmbH</strong>, where I contributed to real-world projects involving firmware development, embedded system testing, and NBIOT communication technologies. My technical skill set spans from low-level microcontroller programming in C/C++ to advanced model-based development with MATLAB and Simulink, making me adept at tackling complex technical challenges.</p>
-        <p class="indented">Driven by a passion for continuous learning and innovation, I am proficient in real-time operating systems, debugging, and agile methodologies. With a solid foundation in both software and hardware, including expertise in protocols like SPI, I2C, UART, and automotive bus systems, I am committed to creating efficient, reliable, and high-performing embedded solutions.</p>
-        <p class="indented">When I'm not coding or exploring new embedded technologies, you’ll find me enhancing my skill set through certifications in advanced microcontroller development, FreeRTOS, and UML-based state machines. I’m excited to connect with industry professionals and contribute my expertise to cutting-edge projects that push the boundaries of embedded systems.</p>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Work Experience</h2>
-
-        <div class="job">
-            <div class="experience-item">
-                <img src="Images/SeleonLogo.jpg" alt="Honeywell Elster GmbH Logo" class="logo">
-                <div>
-                    <h3>Embedded Software/Firmware Developer (Working Student)</h3>
-                    <p><strong>Seleon GmbH | May 2024 - Present</strong></p>
-                    <p>At Seleon GmbH, I am responsible for designing and developing embedded software for STM32 microcontrollers, primarily for use in medical devices and IoT applications. My key tasks include:</p>
-                    <ul>
-                        <li>Designing and implementing firmware for STM32 microcontrollers using C/C++.</li>
-                        <li>Conducting unit tests and debugging embedded systems to ensure optimal performance.</li>
-                        <li>Collaborating with cross-functional teams to define software requirements and specifications.</li>
-                        <li>Documenting firmware processes and software features.</li>
-                        <li>Configuring Google Test framework to test Embedded software functionality (Unit Level).</li>
-                    </ul>
-                </div>
-            </div>        
-        </div>
-
-        <div class="job">
-            <div class="experience-item">
-                <img src="Images/HoneywellLogo.jpg" alt="Honeywell Elster GmbH Logo" class="logo">
-                <div>
-                    <h3>Intern Embedded Software Engineer</h3>
-                    <p><strong>Honeywell Elster GmbH | Apr 2019 - Mar 2021</strong></p>
-                    <p>During my internship at Honeywell Elster GmbH, I was tasked with researching and developing a new test environment for NBIOT communication systems, a key technology for smart gas meters. My responsibilities included:</p>
-                        <ul>
-                            <li>Implementing state machines and control algorithms for NBIoT State Machine application.</li>
-                            <li>Creating a test enviroment using MATLAB. Designing and developing test scripts in MATLAB to simulate NBIoT communication and optimize testing protocols.</li>
-                            <li>Optimizing testing strategies to enhance functionality, efficiency and robustness of NBIoT state machine application.</li>
-                        </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-
-        <div class="education-item">
-            <div class="education-details">
-                <img src="Images/TUCLogo.png" alt="JB Institute of Engineering and Technology Logo" class="logo">
-                <div>
-                    <h3>Master of Science in Embedded Systems</h3>
-                    <p><strong>Technical University of Chemnitz | Current Grade: 1.9 | Expected Graduation: 2025</strong></p>
-                    <p>My Master's program focuses on advanced topics in embedded systems, including microcontroller programming, real-time systems, and model-based design using MATLAB/Simulink. My current grade is 1.9 (German grading scale), and I am working on my thesis related to embedded software development for medical devices.</p>
-                    <li>Design of Software for Embedded Systems.</li>
-                    <li>Real Time Operating Systems.</li>
-                    <li>Hardwar/Software Codesign.</li>
-                    <li>Smart Sensor Systems.</li>
-                    <li>Digital Signal Processing.</li>
-                </div>
-            </div>
-        </div>
-        <div class="education-item">
-            <div class="education-details">
-                <img src="Images/JBIETLogo.png" alt="JB Institute of Engineering and Technology Logo" class="logo">
-                <div>
-                    <h3>Bachelor of Technology in Electrical and Electronics Engineering</h3>
-                    <p><strong>JB Institute of Engineering and Technology | Final Grade: 2.1</strong></p>
-                    <p>In my Bachelor's program, I gained a solid foundation in electrical engineering principles, circuit design, and embedded systems development. My final grade was 2.1, and I was actively involved in various projects involving control systems and automation.</p>
-                    <li>Programming with C and C++.</li>
-                    <li>Micro processors and Microcontrollers.</li>
-                    <li>Model Based design using MATLAB/Simulink.</li>
-                    <li>Integrated Circuits.</li>
-                    <li>Electronic devices and circuits.</li>
-                    <li>Control systems.</li>
-                    <li>Switching theory and logic design.</li>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Recent Projects</h2>
-        <div class="project">
-            <div class="project-details">
-                <h3>Driver Development for STM32F407xx MCU</h3>
-                <p>In this project, I developed low-level drivers from scratch for essential peripherals on the STM32F407 microcontroller, focusing on core communication protocols and I/O handling to enable robust embedded applications. The project involved designing and implementing drivers for GPIO, SPI, I2C, and UART </p>
-                <h4>Development Tools</h4>
-                <ul>
-                    <li>STM32Cube IDE</li>
-                    <li>SPI,UART,I2C and GPIO</li>
-                    <li>Stm32f407 Disc1 board</li>
-                   
-                </ul>
-                <a href="https://github.com/7997275647/Stm32f407_Driver_Development/tree/master" class="view-project-button">View Project</a>
-            </div>
-            <div class="project-image">
-                <img src="Images/Drivers.jpg" alt="Project screenshot">
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-details">
-                <h3>Evaluation of a New Test Environment for NBIOT Communication</h3>
-                <p>For this project, I developed a test environment to simulate and evaluate NBIOT communication systems for smart gas meter applications. The project involved designing a testing framework using MATLAB and integrating real-time data monitoring to assess the reliability and performance of communication protocols in the field.</p>
-                <h4>Development Tools</h4>
-                <ul>
-                    <li>MATLAB</li>
-                    <li>Visual Studio</li>
-                    <li>TPT</li>
-                   
-                </ul>
-                <a href="https://github.com/7997275647/Internship/tree/main/EI4_NBIOT_matlab_test" class="view-project-button">View Project</a>
-            </div>
-            <div class="project-image">
-                <img src="Images/State_Machine (2).png" alt="Project screenshot">
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-details">
-                <h3>Productive Time Calculator</h3>
-                <p>This project is an embedded system that calculates and displays "productive time" using an Arduino Uno and a state machine designed with UML. The system allows users to set a timer, increment or decrement time, pause, and abort the countdown. It keeps track of productive time, which can be useful for timing work sessions or similar activities. </p>
-                <h4>Development Tools</h4>
-                <ul>
-                    <li>Astah UML</li>
-                    <li>Visual Studio Code</li>
-                    <li>Arduino Uno</li>
-                    <li>UML-based Embedded System design.</li>
-                    <li>Arduino Uno</li>
-                   
-                </ul>
-                <a href="https://github.com/7997275647/Productive-Time-Calculator" class="view-project-button">View Project</a>
-            </div>
-            <div class="project-image">
-                <img src="Images/Screenshot 2024-11-07 153220.png" alt="Project screenshot">
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-details">
-                <h3>Speed Control of DC Motor</h3>
-                <p>In this project, I designed and developed a model for precise speed control of a DC motor using Pulse Width Modulation (PWM) techniques. Using MATLAB/Simulink, I modeled the system dynamics to simulate motor behavior and control responses. The control algorithm was implemented through Visual Studio Code with the PlatformIO extension, where I wrote embedded code to generate PWM signals for effective motor speed management. This project enabled me to gain practical experience in control system modeling, motor control techniques, and real-time embedded coding, optimizing performance for smooth and accurate motor speed adjustments. </p>
-                <h4>Development Tools</h4>
-                <ul>
-                    <li>MATLAB/Simulink</li>
-                    <li>Visual Studio Code</li>
-                    <li>Arduino Uno</li>
-                   
-                </ul>
-                <a href="https://github.com/7997275647/Speed-Control-of-DC-Motor" class="view-project-button">View Project</a>
-            </div>
-            <div class="project-image">
-                <img src="Images/Model.png" alt="Project screenshot">
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-details">
-                <h3>Parking Assistance System</h3>
-                <p>In this study car parking assistance system is built
-                    based on distance measured by HCSRO4 sensor. </p>
-                <h4>Development Tools</h4>
-                <ul>
-                    <li>H2SR04 Ultrasonic Sensor</li>
-                    <li>Arduino IDE</li>
-                    <li>Arduino Uno</li>
-                    
-                   
-                </ul>
-                <a href="https://github.com/7997275647/Parking-Assistance" class="view-project-button">View Project</a>
-                <a href="https://github.com/7997275647/Parking_Assistance_STM32" class="view-project-button">Project STM32</a>
-            </div>
-            <div class="project-image">
-                <img src="" alt="Project screenshot">
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-details">
-                <h3>Pytest</h3>
-                <p>This project demonstrates the usage of pytest for testing Python code. The project includes examples of various pytest functionalities such as mocking, fixtures, parameterized tests, and conditional test execution using xfail and skip. The aim of this project is to showcase best practices for writing robust, maintainable, and scalable unit tests in Python. </p>
-                <h4>Development Tools</h4>
-                <ul>
-                    <li>pytest</li>
-                    <li>PyCharm</li>
-                </ul>
-                <a href="https://github.com/7997275647/pytest" class="view-project-button">View Project</a>
-            </div>
-            <div class="project-image">
-                <img src="Images/pytest.png" alt="Project screenshot">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>I possess a broad set of technical skills in embedded software development, ranging from microcontroller programming to communication protocols and real-time systems. Below are some of the key skills that I have acquired through academic and professional experiences:</p>
-        <ul>
-            <li>Embedded C/C++ programming for STM32 and ARM microcontrollers</li>
-            <li>MATLAB/Simulink for model-based development and control systems design</li>
-            <li>Real-Time Operating Systems (RTOS) FreeRTOS</li>
-            <li>Development of communication protocols: SPI, I2C, UART</li>
-            <li>Hands-on experience with debugging, testing, and optimizing embedded systems</li>
-            <li>Version control using Git, GitHub, and GitLab</li>
-            <li>Familiarity with hardware interfaces and electronic circuit design</li>
-            <li>Basics of PCB Designing (EAGLE)</li>
-            <li>Unit Testing Frameworks (Google Test and Pytest)</li>
-            <li>UML Based Embedded System Development</li>
-            <li>Basics of Automotive Buses (CAN, Ethernet, Flexray and LIN)</li>
-            <li>AUTOSAR Layered Architecture</li>
-        </ul>
-    </section>
-
-
-    <!-- Certifications Section -->
-
-    <section id="certifications">
-        <h2>Certifications</h2>
-
-        <div class="certification">
-            <h3>Mastering Microcontroller with Embedded Driver Development.</h3>
-            <p><li>Understand Right ways of Handling and programming MCU Peripherals</li>
-                <li>Develop Peripheral drivers for your Microcontroller</li>
-                <li> Understand complete Driver Development steps right from scratch for GPIO,SPI,I2C and USART.</li>
-                <li> Learnt Writing peripheral driver headers, prototyping APIs and implementation</li>
-                <li> Explored MCU data sheets, Reference manuals, start-up Codes to get things done</li>
-                <li>Learnt Right ways of handling/configuring Interrupts for various peripherals</li>
-                <li> Learnt about Peripheral IRQs/Vector table/NVIC interfaces and many</li>
-                <li> Learnt about Configuration/status/Control registers of various Peripherals</li>
-                <li> Demystifying behind the scene working details of SPI,I2C,GPIOs,USART etc.</li>
-                <li> Explored hidden secretes of MCU bus interfaces, clock sources, MCU clock configurations, etc.</li>
-                <li> Understand right ways of enabling/configuring peripheral clocks/serial clocks/baud rates of various serial protocols</li>
-                <li> Learnt about MCUs AHB, APB bus protocols</li>
-                <li> Learnt about different MCU clocks like HCLK, PCLK, PLL,etc</li>
-                <li> Learnt to capture/decode/analyze traces of serial protocols on Logic analyzer</li>
-                <li> Learnt about Quick ways of debugging peripheral issues with case studies. <a href="https://www.udemy.com/certificate/UC-782c28b0-d398-495e-a9ea-ed60a96ec20b/" target="_blank">View Certificate</a></li></p>
-        </div>
-        <div class="certification">
-            <h3>Mastering RTOS: Hands on FreeRTOS and STM32Fx with Debugging.</h3>
-            <p><li>Learn Complete Step by step method to run FreeRTOS on STM32 MCUs using OpenSTM32 System Workbench</li>
-                <li>Using STM32 Standard Peripheral Driver APIs to configure peripherals</li>
-                <li>FreeRTOS Task Creation , Deletion, Scheduling using with code examples</li>
-                <li>Important scheduling policies of FreeRTOS Scheduler</li>	
-                <li>FreeRTOS Stack and Heap Management</li>	
-                <li>Right ways of Synchronizing between tasks using Semaphores.</li>	
-                <li>Right ways of Synchronizing between a task and an interrupt using semaphores</li>	
-                <li>Synchronization between multiple events and a task</li>	
-                <li>FreeRTOS Queue management like creation, sending, receiving, blocking, etc</li>	
-                <li>Implementing mutual exclusion between Tasks using Mutex services and semaphores</li>	
-                <li>Understanding Context Switching with in detail code explanation</li>	
-                <li>Understanding Architecture specific codes like SVC_handler, PendSV_handler, SysTick Handler line by line</li>	
-                <li>You will learn about kernel Tick timer, its importance, the kernel tick frequency and its configuration details.</li>	
-                <li>Understanding complete ARM Cortex M and FreeRTOS Priority model and its configuration related informations</li>	
-                <li>FreeRTOS Debugging using SEGGER SystemView Software</li>	
-            
-                <li>Debugging with SEGGER software toolkit by taking snapshot and continuous mode recording
-                 <a href="https://www.udemy.com/course/mastering-rtos-hands-on-with-freertos-arduino-and-stm32fx/" target="_blank">View Certificate</a></li>	</p>
-        </div>
-        <div class="certification">
-            <h3>Model Based Design: Build Embedded Systems with Simulink.</h3>
-            <h4>Model Based Development - MBD: From Requirements to Testing on Hardware.</h4>
-            <p><li>Learn Complete Step by step method to run FreeRTOS on STM32 MCUs using OpenSTM32 System Workbench</li>
-                <li>Understand the concept of Model Based Design.</li>
-                <li>Configure Simulink Model for Code Generation</li>
-                <li>Integrate Hand-Written Code with Generated Code from Simulink</li>	
-                <li>Test Code on Real Hardware</li>	
-                <li>Requirements Analysis.</li>	
-                <li>Interface Sensors and Actuators with Microcontroller</li>	
-                <li>Synchronization between multiple events and a task</li>	
-                <li>Develop Algorithms for Different Sensors Using Simulink. <a href="https://www.udemy.com/certificate/UC-8e21a345-eff0-4291-9191-1a6f8a03f5c5/" target="_blank">View Certificate</a></li>	</p>
-        </div>
-        <div class="certification">
-            <h3>Embedded System Design using UML State Machines.</h3>
-            <h4>Implementation of event-driven embedded applications using simple and hierarchical UML state machine approach</h4>
-            <p><li>Event driven programming paradigm</li>
-                <li>Flat and hierarchical state machines (Simple FSMs and H-FSMs).</li>
-                <li>UML state machine semantics and state chart drawing.</li>
-                <li>Converting UML statecharts into executable C/C++ code.</li>	
-                <li>Action objects design approach.</li>	
-                <li>Different state machine implementation strategies.</li>	
-                <li>Nested switch implementation of state machines.</li>	
-                <li>State-Handler approach to implementing the state machines.</li>
-                <li>Usage of function pointers in 'C'.</li>	
-                <li>Hands-on projects using simple FSM and HSMs.</li>		
-                <li>Step by step code development.</li>	
-                <li>Graphically modeling event-driven embedded application using UML statecharts modeler tools.</li>
-                <li>SWorking with QP™ embedded real-time framework and QM™ tool of Quantum Leaps, LLC to draw and implement the HSMs.
-                <a href="https://www.udemy.com/course/mastering-rtos-hands-on-with-freertos-arduino-and-stm32fx/" target="_blank">View Certificate</a></li>	</p>
-        </div>
-        <div class="certification">
-            <h3>Master Make and Makefile for C/C++ Projects.</h3>
-            <h4>Efficient Management of C/C++ Workflow with Advanced Makefile Techniques!</h4>
-            <p><li>Understand the building blocks of Makefiles.</li>
-                <li>Basic C/C++ Project Structure.</li>
-                <li>Makefile Variables.</li>
-                <li>Command-Line Values for Variables.</li>	
-                <li>Compiler, Pre-Processor, and Linker Flags.</li>	
-                <li>Using Sub-Directories.</li>	
-                <li>Patterns, Wildcards, and Substitutions. <a href="https://www.udemy.com/certificate/UC-714ad474-4def-4c6a-a6bb-b61aba58b7d5/" target="_blank">View Certificate</a></li>	</p>
-        </div>
-        
-
-        <!-- Repeat the structure for all your projects -->
-        
-        
-    </section>
-
-    
-    <!-- Contact Section -->
-   
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you would like to connect, collaborate, or discuss potential opportunities, feel free to reach out to me using the following contact details:</p>
-        
-            Email:
-            <a href="mailto: modugusandeepreddy2@gmail.com">
-                <i class="fas fa-envelope"></i> 
-            </a>
-            
-        
-        
-            LinkedIn: 
-            <a href="https://www.linkedin.com/in/sandeep-reddy-modugu-5278a3163" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            
-        
-       
-            GitHub:
-            <a href="https://github.com/7997275647" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            
-        
-    </section>
-
-    <!-- Contact Section -->
-<section id="contact">
-    <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-    </form>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 selection:bg-primary/30">
+<nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/20 dark:border-slate-800/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons-round text-white text-xl">memory</span>
+</div>
+<span class="font-display font-bold text-xl tracking-tight hidden sm:block">Sandeep</span>
+</div>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors uppercase tracking-wider" href="#about">About</a>
+<a class="hover:text-primary transition-colors uppercase tracking-wider" href="#experience">Experience</a>
+<a class="hover:text-primary transition-colors uppercase tracking-wider" href="#projects">Projects</a>
+<a class="hover:text-primary transition-colors uppercase tracking-wider" href="#skills">Skills</a>
+<a class="px-5 py-2 bg-primary text-white rounded-full hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all" href="#contact">Get in Touch</a>
+</div>
+<button class="md:hidden p-2 text-slate-500">
+<span class="material-icons-round">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<header class="relative pt-32 pb-20 overflow-hidden circuit-bg" style="background-image: url('Images/AboutMe.jpg'); background-size: cover; background-position: center; background-attachment: fixed; opacity: 0.9;">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-light/70 to-background-light dark:via-background-dark/70 dark:to-background-dark pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col items-center text-center">
+<div class="relative mb-8">
+<div class="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-blue-500 blur opacity-75 animate-pulse"></div>
+<img alt="Sandeep Reddy Modugu" class="relative w-40 h-40 rounded-full object-cover border-4 border-white dark:border-slate-900" src="Images/profile_picture.jpg"/>
+</div>
+<h1 class="font-display text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+                    Sandeep Reddy <span class="text-primary">Modugu</span>
+</h1>
+<p class="text-xl md:text-2xl font-light text-slate-600 dark:text-slate-400 max-w-2xl mb-8">
+                    Embedded Systems Enthusiast &amp; Firmware Developer designing the <span class="text-slate-900 dark:text-white font-medium italic underline decoration-primary decoration-2">intelligence</span> behind modern hardware.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold rounded-lg hover:scale-105 transition-transform" href="#projects">
+<span class="material-icons-round">rocket_launch</span> View Projects
+                    </a>
+<a class="flex items-center gap-2 px-8 py-3 bg-slate-200 dark:bg-slate-800 font-bold rounded-lg hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" href="#contact">
+<span class="material-icons-round">mail</span> Contact Me
+                    </a>
+</div>
+</div>
+</div>
+</header>
+<section class="py-24 bg-white dark:bg-slate-950" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-bold tracking-widest uppercase rounded mb-4">Discovery</div>
+<h2 class="font-display text-4xl font-bold mb-6">Mastering the Bridge Between <span class="text-primary">Software &amp; Hardware</span></h2>
+<div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+  <p><strong>Embedded Software Engineer</strong> with 2+ years of experience in <strong>C/C++ firmware development</strong> for industrial and power tool applications. Specialized in <strong>32-bit ARM architectures</strong>, <strong>RTOS environments</strong>, and <strong>low-level driver optimization</strong>.</p>
+  <p>Proven track record in enhancing code quality by 80% and streamlining <strong>CI/CD pipelines</strong> for complex embedded systems. Experienced in <strong>hardware-software co-design</strong>, <strong>Python automation</strong>, and debugging using <strong>oscilloscopes and protocol analyzers</strong>, with a strong focus on <strong>real-time signal processing</strong> and <strong>motor control algorithms</strong>.</p>
+<div class="flex items-center gap-6 pt-4">
+<div class="w-px h-10 bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary">2+</span>
+<span class="text-xs uppercase tracking-wider opacity-60">Years Experience</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary">10+</span>
+<span class="text-xs uppercase tracking-wider opacity-60">Projects Completed</span>
+</div>
+<div class="w-px h-10 bg-slate-200 dark:bg-slate-800"></div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-slate-100 dark:bg-slate-900 rounded-3xl overflow-hidden p-8 border border-slate-200 dark:border-slate-800 relative group">
+<div class="absolute top-4 left-4 w-12 h-12 bg-primary/20 rounded flex items-center justify-center text-primary">
+<span class="material-icons-round">developer_board</span>
+</div>
+<img alt="Embedded Hardware" class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-500 shadow-2xl" src="Images/coverpage.jpg"/>
+</div>
+</div>
+</div>
+</div>
 </section>
+<section class="py-24 bg-slate-50 dark:bg-background-dark/50" id="experience">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-display text-4xl font-bold mb-12 text-center">Professional <span class="text-primary">Journey</span></h2>
+<div class="space-y-12">
+<!-- HILTI Master Thesis Experience -->
+<div class="relative pl-8 border-l-2 border-primary/30">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(6,182,212,1)]"></div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Master Thesis </h3>
+<p class="text-primary font-medium">HILTI Entwicklungsgesellschaft mbH | Jul 2025 - Jan 2026</p>
+</div>
+</div>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span>  <strong>Title:</strong> Quantitative Evaluation of Acceleration Techniques for Digital Signal Processing: A Case Study on Hilti Applications</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Achieved nearly 2x performance improvement using CMSIS-SIMD intrinsics on ARM Cortex-M4 for filtering tasks in motor control algorithms.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Entirely offloaded CPU by implementing filtering algorithms using hardware accelerators (FMAC, CORDIC) on STM32H7/G4 microcontrollers.</li>
+</ul>
+</div>
+</div>
 
-   
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Sandeep Reddy Modugu. All rights reserved.</p>
-    </footer>
+<!-- HILTI Internship Experience -->
+<div class="relative pl-8 border-l-2 border-primary/30">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600"></div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Intern Embedded Software Developer</h3>
+<p class="text-primary font-medium">HILTI Entwicklungsgesellschaft mbH | Jan 2025 - Jul 2025</p>
+</div>
+</div>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Developed low-level firmware and hardware abstraction layers in C/C++ for industrial power tools.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Developed custom Python scripts to automate regression testing and firmware validation, significantly reducing manual effort and ensuring module stability during integration.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Reduced static analysis violations by 80% through modular restructuring, ensuring strict adherence to MISRA C standards.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Improved software reliability by implementing UNITY unit tests, leading to a 40% reduction in development-phase defects.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Optimized CI/CD workflows by migrating pipelines to GitLab, resulting in 30% faster build times.</li>
+</ul>
+</div>
+</div>
 
-</body>
-</html>
 
+<!-- Seleon Experience -->
+<div class="relative pl-8 border-l-2 border-primary/30">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600"></div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Embedded Software/Firmware Developer</h3>
+<p class="text-primary font-medium">Seleon GmbH | May 2024 - Nov 2024</p>
+</div>
+</div>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Designing firmware for STM32 microcontrollers using C/C++.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Unit testing firmware functionality with Google Test framework.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Collaborating with cross-functional teams to define software requirements.</li>
+</ul>
+</div>
+</div>
 
+<!-- Honeywell Experience -->
+<div class="relative pl-8 border-l-2 border-primary/30">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600"></div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-4">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white">Intern Embedded Software Engineer</h3>
+<p class="text-primary font-medium">Honeywell Elster GmbH | Oct 2023 - Apr 2024</p>
+</div>
+</div>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Developed state machines and control algorithms for NBIoT communication.</li>
+<li class="flex items-start gap-3"><span class="material-icons-round text-primary text-sm mt-1">settings</span> Built a test environment using MATLAB/Simulink for NB-IoT system validation.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-950" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-display text-4xl font-bold">Personal <span class="text-primary">Projects</span></h2>
+<p class="text-slate-500 mt-2">Technical implementations and hardware innovations.</p>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group tech-card bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="h-48 overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
+<img alt="STM32 MCU Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="Images/Drivers.jpg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-primary font-display font-bold text-lg px-4 py-2 border-2 border-primary rounded">DRIVER DEV</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Driver Dev for STM32F407xx</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">Low-level driver development for I2C, SPI, and UART communication protocols. Built from scratch for STM32F407VG.</p>
+<div class="mt-auto">
+<div class="flex flex-wrap gap-2 mb-4 text-[10px] font-bold uppercase tracking-wider">
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">C Language</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">STM32Cube</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">I2C/SPI</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 group/link" href="https://github.com/7997275647/Stm32f407_Driver_Development">
+                                DETAILS <span class="material-icons-round text-base group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<div class="group tech-card bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="h-48 overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
+<img alt="NB-IoT Environment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="Images/NBIoT.jpg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-primary font-display font-bold text-lg px-4 py-2 border-2 border-primary rounded">SIMULATION</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">NB-IoT Test Environment</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">Simulation and evaluation of NB-IoT communication protocols for smart gas meter applications using MATLAB/Simulink.</p>
+<div class="mt-auto">
+<div class="flex flex-wrap gap-2 mb-4 text-[10px] font-bold uppercase tracking-wider">
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">MATLAB</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">Simulink</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">C#</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 group/link" href="https://github.com/7997275647/Internship">
+                                DETAILS <span class="material-icons-round text-base group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<div class="group tech-card bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="h-48 overflow-hidden bg-slate-200 dark:bg-slate-900 relative">
+<img alt="Parking Assistant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIwqhPbEKqQx618WEsPO2JfZ4iuSxWPQcil38LUsedQIdEO9ubC6brp5434G5f0i492zEpoUFrhMDBKmCryeD7ZLoPo-WJA51kWNDZ72G0ai1Sjj4M9lT37h_1x8a6G-j7CT89WZL0b8LTfwcI5iyDD8lBUHXzcZtcIN5Pjwp9cShuxpn2gWVYc5f0kCdez-tgUGohBYzs6CQVNHpNwM3nK6rJCQbzbji9FGzd1KbnjBplQJdLogN_x0K6Px_mI6kdLr2YM3iW1Kl9"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-primary font-display font-bold text-lg px-4 py-2 border-2 border-primary rounded">CONTROL SYS</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Smart Parking Assistance</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">Distance measurement system based on ultrasonic sensors with real-time feedback and obstacle detection logic.</p>
+<div class="mt-auto">
+<div class="flex flex-wrap gap-2 mb-4 text-[10px] font-bold uppercase tracking-wider">
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">Arduino</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">C++</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">Ultrasonic</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 group/link" href="https://github.com/7997275647/Parking-Assistance">
+                                DETAILS <span class="material-icons-round text-base group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<div class="group tech-card bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="h-48 overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
+<img alt="Industrial IoT Gateway" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="Images/Industrial_IoT_Gateway.jpg"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-primary font-display font-bold text-lg px-4 py-2 border-2 border-primary rounded">IOTGATEWAY</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Industrial-IoT Gateway</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">High-performance IIoT Edge Gateway on STM32F767ZI with FreeRTOS, LwIP, and MbedTLS for secure cloud telemetry and system dependability.</p>
+<div class="mt-auto">
+<div class="flex flex-wrap gap-2 mb-4 text-[10px] font-bold uppercase tracking-wider">
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">C</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">FreeRTOS</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">STM32F767</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 group/link" href="https://github.com/7997275647/Industrial-IoT-Gateway">
+                                DETAILS <span class="material-icons-round text-base group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<div class="group tech-card bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="h-48 overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
+<img alt="SecureBoot STM32" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIAQ2RebytE9JiE02YCQ4ScbRn5ZaPNRl0Fgm60afvBX-LpApJGb3xTBVSbyFNB1mW03yWd0rnbWxXs_8lQRSXeu0zUMRWvvlZsASuiBrflyWXRMZd2T6zOmtQXePw6mIf6eNmYqCpVnj5ocEthLRmI8cw3Whxxi7Qn1VS4cp7x5mtxZftJ7-XUgBDT1pqkgqjQ5ExwUNdilwkNjnnaFjNq6ofV2lznRdUuGyi5dxrNBzQ6_FZROjb02jhbTScTs6viyDWC0E8JQGL"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-primary font-display font-bold text-lg px-4 py-2 border-2 border-primary rounded">SECURITY</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">SecureBoot-STM32</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">Secure bootloader implementation for STM32 microcontrollers with firmware authentication, integrity verification, and cryptographic protection.</p>
+<div class="mt-auto">
+<div class="flex flex-wrap gap-2 mb-4 text-[10px] font-bold uppercase tracking-wider">
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">C</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">Cryptography</span>
+<span class="px-2 py-1 bg-slate-200 dark:bg-slate-800 rounded">Bootloader</span>
+</div>
+<a class="text-sm font-bold text-primary flex items-center gap-1 group/link" href="https://github.com/7997275647/SecureBoot-STM32">
+                                DETAILS <span class="material-icons-round text-base group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-900/20" id="skills">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="font-display text-4xl font-bold mb-16 text-center">Technical <span class="text-primary">Ecosystem</span></h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<!-- Languages -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">code</span>
+<p class="font-bold text-sm uppercase tracking-wider">C/C++</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">terminal</span>
+<p class="font-bold text-sm uppercase tracking-wider">Python</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">settings_input_component</span>
+<p class="font-bold text-sm uppercase tracking-wider">C#</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">science</span>
+<p class="font-bold text-sm uppercase tracking-wider">MATLAB/Simulink</p>
+</div>
+<!-- Architecture & MCU -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">memory</span>
+<p class="font-bold text-sm uppercase tracking-wider">32-bit ARM Architecture</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">developer_board</span>
+<p class="font-bold text-sm uppercase tracking-wider">ARM Cortex-M</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">router</span>
+<p class="font-bold text-sm uppercase tracking-wider">STM32</p>
+</div>
+<!-- RTOS & System -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">schedule</span>
+<p class="font-bold text-sm uppercase tracking-wider">FreeRTOS</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">build</span>
+<p class="font-bold text-sm uppercase tracking-wider">Bare Metal</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">security</span>
+<p class="font-bold text-sm uppercase tracking-wider">HAL/LL</p>
+</div>
+<!-- Communication Protocols -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">hub</span>
+<p class="font-bold text-sm uppercase tracking-wider">UART</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">settings</span>
+<p class="font-bold text-sm uppercase tracking-wider">SPI</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">schema</span>
+<p class="font-bold text-sm uppercase tracking-wider">I2C</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">pipe</span>
+<p class="font-bold text-sm uppercase tracking-wider">CAN</p>
+</div>
+<!-- Debugging & Measurement -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">assessment</span>
+<p class="font-bold text-sm uppercase tracking-wider">Oscilloscope</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">radar</span>
+<p class="font-bold text-sm uppercase tracking-wider">Logic Analyzer</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">cable</span>
+<p class="font-bold text-sm uppercase tracking-wider">JTAG/SWD</p>
+</div>
+<!-- Version Control & Build -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">source</span>
+<p class="font-bold text-sm uppercase tracking-wider">Git</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">hub</span>
+<p class="font-bold text-sm uppercase tracking-wider">GitLab</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">layers</span>
+<p class="font-bold text-sm uppercase tracking-wider">Docker</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">construction</span>
+<p class="font-bold text-sm uppercase tracking-wider">Meson/Ninja</p>
+</div>
+<!-- IDEs & Tools -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">build</span>
+<p class="font-bold text-sm uppercase tracking-wider">STM32CubeIDE</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">terminal</span>
+<p class="font-bold text-sm uppercase tracking-wider">VS Code</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">widgets</span>
+<p class="font-bold text-sm uppercase tracking-wider">Keil MDK</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">sync</span>
+<p class="font-bold text-sm uppercase tracking-wider">Jenkins</p>
+</div>
+<!-- Standards & Testing -->
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">rule</span>
+<p class="font-bold text-sm uppercase tracking-wider">MISRA-C</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">check_circle</span>
+<p class="font-bold text-sm uppercase tracking-wider">Unity Testing</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">architecture</span>
+<p class="font-bold text-sm uppercase tracking-wider">UML</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">build</span>
+<p class="font-bold text-sm uppercase tracking-wider">PCB Design</p>
+</div>
+<div class="tech-card bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 text-center hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-4xl text-primary mb-3">description</span>
+<p class="font-bold text-sm uppercase tracking-wider">LaTeX</p>
+</div>
+</div>
+<div class="mt-16 bg-primary/5 border border-primary/10 rounded-3xl p-8 md:p-12">
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h4 class="font-display font-bold text-xl mb-4 flex items-center gap-2">
+<span class="material-icons-round text-primary">verified</span> Certifications
+                        </h4>
+<ul class="space-y-4 text-sm">
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-sm mt-1">check_circle</span>
+<div>
+<span class="font-bold text-slate-900 dark:text-white">Mastering Microcontrollers</span>
+<p class="text-slate-500">Embedded Driver Development (GPIO, I2C, SPI, UART)</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-sm mt-1">check_circle</span>
+<div>
+<span class="font-bold text-slate-900 dark:text-white">FreeRTOS on STM32</span>
+<p class="text-slate-500">Real-Time Kernels &amp; Task Scheduling</p>
+</div>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-bold text-xl mb-4 flex items-center gap-2">
+<span class="material-icons-round text-primary">school</span> Education
+                        </h4>
+<div class="space-y-6">
+<div>
+<p class="font-bold text-slate-900 dark:text-white">M.Sc. in Embedded Systems</p>
+<p class="text-slate-500 text-sm italic">TU Chemnitz, Germany</p>
+</div>
+<div>
+<p class="text-slate-400 font-bold text-xs uppercase mb-1"></p>
+<p class="font-bold text-slate-900 dark:text-white">Bachelors in Electrical and Electronics Engineering</p>
+<p class="text-slate-500 text-sm italic">JB Institute of Engineering &amp; Tech</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative overflow-hidden" id="contact">
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-display text-4xl font-bold mb-4">Let's <span class="text-primary">Connect</span></h2>
+<p class="text-slate-500">I'm currently open for professional opportunities and collaborative projects.</p>
+</div>
+<div class="grid md:grid-cols-5 gap-12">
+<div class="md:col-span-2 space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons-round">alternate_email</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase text-slate-400" >Email</p>
+<p class="font-medium"><a href="mailto:modugusandeepreddy2@gmail.com">modugusandeepreddy2@gmail.com</a></p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons-round">link</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase text-slate-400">Socials</p>
+<div class="flex gap-4 mt-1">
+<a class="text-primary hover:underline" href="https://www.linkedin.com/in/sandeep-reddy-modugu-5278a3163/">LinkedIn</a>
+<a class="text-primary hover:underline" href="https://github.com/7997275647">GitHub</a>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-3">
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-500 mb-2">Name</label>
+<input class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 rounded-lg focus:ring-primary focus:border-primary" placeholder="FirstName LastName" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-500 mb-2">Email</label>
+<input class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 rounded-lg focus:ring-primary focus:border-primary" placeholder="me@example.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-500 mb-2">Message</label>
+<textarea class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 rounded-lg focus:ring-primary focus:border-primary" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="py-12 border-t border-slate-200 dark:border-slate-900 text-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<p class="text-slate-500 text-sm">
+                © 2026 Sandeep Reddy Modugu. Built with precision and low-level obsession.
+            </p>
+<div class="flex justify-center gap-6 mt-4 opacity-50 text-xs font-bold uppercase tracking-[0.2em]">
+<span>Firmware</span>
+<span>•</span>
+<span>Hardware</span>
+<span>•</span>
+<span>Design</span>
+</div>
+</div>
+</footer>
+
+</body></html>
