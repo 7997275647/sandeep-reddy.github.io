@@ -8,7 +8,7 @@ export function Experience() {
     <Accordion type="single" collapsible defaultValue="consultant" className="timeline">
       {experience.map((item) => (
         <AccordionItem key={item.id} value={item.id} className="timeline-item border-0">
-          <div className="timeline-date">{item.period}{item.current && <span className="current">CURRENT ROLE</span>}</div>
+          <div className="timeline-date">{item.period}{item.current && <span className="current">Current</span>}</div>
           <span className="timeline-node" aria-hidden="true" />
           <div className="timeline-body">
             <AccordionTrigger className="timeline-trigger hover:no-underline">

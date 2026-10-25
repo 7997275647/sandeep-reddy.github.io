@@ -25,7 +25,6 @@ export function Skills() {
         })}
       </div>
       <div id="skill-detail" className="skill-panel" role="region" aria-label="Selected expertise" aria-live="polite" aria-atomic="true">
-        <p className="skill-panel-label">{group.label}</p>
         <h3>{group.title}</h3>
         <p>{group.description}</p>
         <div className="skill-cloud">{group.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>

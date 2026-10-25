@@ -21,7 +21,7 @@ export function Projects({ projects }: { projects: FeaturedProject[] }) {
             <button key={category} className="project-filter" type="button" aria-pressed={filter === category} onClick={() => setFilter(category)}>{category}</button>
           ))}
         </div>
-        <span className="project-count" role="status">{String(visible.length).padStart(2, "0")} PROJECTS / {filter.toUpperCase()}</span>
+        <span className="project-count" role="status">{visible.length} {visible.length === 1 ? "project" : "projects"}{filter === "All work" ? "" : ` in ${filter}`}</span>
       </div>
       <div className="project-grid">
         <AnimatePresence initial={false} mode="popLayout">
@@ -53,10 +53,10 @@ export function Projects({ projects }: { projects: FeaturedProject[] }) {
                           <DialogDescription className="mt-2 text-xs leading-relaxed">{project.summary}</DialogDescription>
                         </DialogHeader>
                         <div className="tags">{project.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div>
-                        <div className="case-section"><h3>01 / The challenge</h3><p>{project.problem}</p></div>
-                        <div className="case-section"><h3>02 / The engineering</h3><p>{project.approach}</p></div>
-                        <div className="case-section"><h3>03 / The outcome</h3><p>{project.outcome}</p></div>
-                        <div className="case-boundary"><strong>Scope & honest boundaries</strong>{project.boundary}</div>
+                        <div className="case-section">                        <h3>The problem</h3><p>{project.problem}</p></div>
+                                                <div className="case-section"><h3>How I built it</h3><p>{project.approach}</p></div>
+                                                <div className="case-section"><h3>The outcome</h3><p>{project.outcome}</p></div>
+                                                <div className="case-boundary"><strong>Scope and limits</strong>{project.boundary}</div>
                         <Button asChild className="min-h-11 gap-3 text-xs">
                           <a href={project.repository.html_url} target="_blank" rel="noreferrer">Explore the source<ArrowUpRight size={15} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
                         </Button>

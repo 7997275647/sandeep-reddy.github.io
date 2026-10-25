@@ -9,8 +9,8 @@ test("renders verified sections, metadata and loaded assets without page errors"
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await expect(page).toHaveTitle(/Sandeep Reddy Modugu.*Embedded Software Engineer/);
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Software thatmoves thereal world.");
-  for (const id of ["about", "achievements", "experience", "projects", "skills", "github", "contact"]) {
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Hi, I'm Sandeep.");
+  for (const id of ["about", "experience", "projects", "skills", "github", "contact"]) {
     await expect(page.locator(`#${id}`)).toBeAttached();
   }
   const portrait = page.getByAltText("Sandeep Reddy Modugu", { exact: true });
@@ -25,7 +25,7 @@ test("renders verified sections, metadata and loaded assets without page errors"
 test("filters repositories and opens an accessible, truthful case study", async ({ page }) => {
   await page.getByRole("button", { name: "Firmware", exact: true }).click();
   await expect(page.locator(".project-card")).toHaveCount(1);
-  await expect(page.getByRole("status").filter({ hasText: "01 PROJECTS" })).toBeVisible();
+  await expect(page.getByRole("status").filter({ hasText: "1 project in Firmware" })).toBeVisible();
   const trigger = page.getByRole("button", { name: "Read the story: STM32 Bootloader case study" });
   await trigger.click();
   const dialog = page.getByRole("dialog");
@@ -44,7 +44,7 @@ test("expands career details and switches evidence-backed skill areas", async ({
   await thesis.click();
   await expect(thesis).toHaveAttribute("aria-expanded", "true");
   await expect(page.getByText("Built a reproducible Hardware-in-the-Loop framework", { exact: false })).toBeVisible();
-  await page.getByRole("button", { name: /Verification & reliability Professional experience/ }).click();
+  await page.getByRole("button", { name: /Verification & reliability/ }).click();
   await expect(page.locator("#skill-detail")).toContainText("IEC 60730 Annex H");
   await expect(page.locator("#skill-detail")).toContainText("80% fewer MISRA C violations");
 });
@@ -90,15 +90,23 @@ test("preserves the core story and repository links without JavaScript", async (
   await context.close();
 });
 
-test("honors reduced motion and offers a pause control", async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: "no-preference" });
-  const pause = page.getByRole("button", { name: "Pause signal animation" });
-  await pause.click();
-  await expect(page.locator(".signal-panel")).toHaveClass(/scope-paused/);
-  await page.getByRole("button", { name: "Play signal animation" }).click();
-  await expect(page.locator(".signal-panel")).not.toHaveClass(/scope-paused/);
+test("switches to a dark theme that persists across reloads and stays accessible", async ({ page }) => {
+  const html = page.locator("html");
+  await expect(html).toHaveClass(/\blight\b/);
+  await page.getByRole("button", { name: "Switch to dark theme" }).click();
+  await expect(html).toHaveClass(/\bdark\b/);
+  await expect(html).not.toHaveClass(/\blight\b/);
+  await page.reload();
+  await expect(html).toHaveClass(/\bdark\b/);
+  await expect(page.getByRole("button", { name: "Switch to light theme" })).toBeVisible();
+  const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
+  expect(results.violations).toEqual([]);
+  await page.getByRole("button", { name: "Switch to light theme" }).click();
+  await expect(html).toHaveClass(/\blight\b/);
+});
+
+test("honors reduced motion", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await expect(page.getByRole("button", { name: "Play signal animation" })).toBeDisabled();
   expect(await page.locator("html").evaluate((element) => getComputedStyle(element).scrollBehavior)).toBe("auto");
 });
 

@@ -28,7 +28,7 @@ export function GitHubActivity({ snapshot }: { snapshot: GitHubSnapshot }) {
             <div><strong>{stats.original}</strong><span>Non-fork repositories</span></div>
             <div><strong>{stats.languages.length}</strong><span>Primary languages</span></div>
           </div>
-          <div className="github-activity-label"><span>PUBLIC EVENT ACTIVITY</span><span>12-WEEK WINDOW</span></div>
+          <div className="github-activity-label"><span>Public activity</span><span>Last 12 weeks</span></div>
           <div className="activity-grid" role="img" aria-label={`${eventCount} public events from GitHub's available feed in the displayed 12-week window. This is not a total contribution count.`}>
             {days.map((day) => (
               <span key={day.date} className="activity-day" data-future={day.future} data-level={Math.min(day.count, 4)} title={`${day.date}: ${day.future ? "future date" : `${day.count} public events in the available feed`}`} />
@@ -41,7 +41,7 @@ export function GitHubActivity({ snapshot }: { snapshot: GitHubSnapshot }) {
           <p className="activity-disclaimer">Real public activity, not a simulated streak. GitHub&apos;s event feed is limited; empty cells do not mean no contributions.</p>
         </div>
         <div className="github-side">
-          <p className="github-side-label">RECENTLY ON THE WORKBENCH</p>
+          <p className="github-side-label">Recent activity</p>
           <ul className="recent-events">
             {events.map((event) => (
               <li key={event.id} className="recent-event">
@@ -55,7 +55,7 @@ export function GitHubActivity({ snapshot }: { snapshot: GitHubSnapshot }) {
           </ul>
           {events.length === 0 && <p className="activity-disclaimer">No public events returned in this snapshot. Explore the repositories directly on GitHub.</p>}
           <div className="github-languages">
-            <p className="github-side-label">REPOSITORIES BY PRIMARY LANGUAGE</p>
+            <p className="github-side-label">Repositories by primary language</p>
             <div className="language-bar" aria-hidden="true">
               {languages.map((language, index) => <span key={language.name} style={{ width: `${language.count / languageTotal * 100}%`, background: colors[index] }} />)}
             </div>
@@ -66,7 +66,7 @@ export function GitHubActivity({ snapshot }: { snapshot: GitHubSnapshot }) {
           </div>
         </div>
       </div>
-      <p className="github-snapshot"><RefreshCw aria-hidden="true" />GitHub API snapshot / {formatDate(snapshot.fetchedAt)} / refreshed at build time</p>
+      <p className="github-snapshot"><RefreshCw aria-hidden="true" />GitHub data as of {formatDate(snapshot.fetchedAt)}, refreshed at build time</p>
     </>
   );
 }

@@ -12,9 +12,11 @@ no server, database, API token in the browser, or third-party tracking required.
 Read the [complete research, brand positioning, UI/UX strategy, design system,
 palette, typography, information architecture and wireframes](docs/STRATEGY.md).
 
-The visual direction pairs an original isometric circuit-board illustration,
-signal-green accents, editorial typography and instrument-panel details.
-Content emphasizes measured engineering outcomes rather than inflated titles:
+The site is written as a plain, first-person portfolio: a short intro with a
+photo, then About, Experience, Projects, Skills, GitHub and Contact. The layout
+is deliberately simple, with signal-green accents. It opens in a light theme and
+has a light/dark toggle in the header; the choice is saved in local storage. Content
+states what I built and what I measured, without inflated titles:
 
 - 2x motor-control filtering performance, Hilti master's thesis.
 - 80% fewer MISRA C static-analysis violations, Hilti internship.

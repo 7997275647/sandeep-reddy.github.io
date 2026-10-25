@@ -10,7 +10,7 @@ export function RepositoryExplorer({ repositories }: { repositories: Repository[
 
   return (
     <details className="repository-explorer">
-      <summary><span><GitBranch size={15} aria-hidden="true" />More from the workbench <span className="muted">({otherWork.length})</span></span><ChevronDown size={16} aria-hidden="true" /></summary>
+      <summary><span><GitBranch size={15} aria-hidden="true" />More repositories <span className="muted">({otherWork.length})</span></span><ChevronDown size={16} aria-hidden="true" /></summary>
       <p className="repository-intro">Automatically listed from GitHub. These repositories include experiments and learning projects, not just finished applications.</p>
       <div className="repository-grid">
         {otherWork.map((repo) => (

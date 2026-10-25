@@ -21,7 +21,7 @@ export function ContactLinks() {
   return (
     <div>
       <div className="contact-address">
-        <span>GOOD CONVERSATIONS START HERE</span>
+        <span>Email</span>
         <a href={`mailto:${person.email}`}>{person.email}<ArrowUpRight aria-hidden="true" /></a>
       </div>
       <div className="contact-socials">
@@ -32,7 +32,7 @@ export function ContactLinks() {
         </button>
       </div>
       <div className="copy-message" role="status" data-error={copyState === "error"}>
-        {copyState === "copied" && "Email copied. Let's build something meaningful."}
+        {copyState === "copied" && "Email copied."}
         {copyState === "error" && "Copy unavailable. Select the email address above or open it in your mail app."}
       </div>
     </div>

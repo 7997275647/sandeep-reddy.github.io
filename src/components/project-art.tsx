@@ -1,17 +1,9 @@
 import { CircleCheck, FileCode2, Play, Radio, Monitor } from "lucide-react";
 import type { ProjectArt as ProjectArtType } from "@/data/portfolio";
 
-const labels: Record<ProjectArtType, { title: string; detail: string }> = {
-  dashboard: { title: "SENSOR TELEMETRY", detail: "QT / MQTT" },
-  bootloader: { title: "FIRMWARE INTEGRITY", detail: "STM32 / CRC32" },
-  patterns: { title: "ARCHITECTURE EXPLORATIONS", detail: "MODERN C++" },
-  gateway: { title: "FROM DEVICE TO DASHBOARD", detail: "SYSTEM DESIGN" },
-};
-
 export function ProjectArt({ type }: { type: ProjectArtType }) {
   return (
     <div className={`project-art art-${type}`} aria-hidden="true">
-      <div className="art-kicker"><span>{labels[type].title}</span><span>{labels[type].detail}</span></div>
       {type === "dashboard" && (
         <div className="mini-dashboard">
           <div className="dashboard-top">sensor / studio<span><i className="status-dot" />MQTT CONNECTED</span></div>
@@ -64,10 +56,9 @@ export function ProjectArt({ type }: { type: ProjectArtType }) {
             <div className="gateway-chip">STM32F767<span>ARM CORTEX-M7</span></div><span className="flow-line" />
             <div className="gateway-end"><Monitor /><span>MQTT / QT</span></div>
           </div>
-          <div className="boot-note">BOARD BRING-UP → TELEMETRY INTEGRATION</div>
+          <div className="boot-note">Board bring-up, then telemetry integration.</div>
         </>
       )}
-      <span className="art-caption">{type === "gateway" ? "INTENDED ARCHITECTURE / IN DEVELOPMENT" : "CONCEPTUAL PROJECT VISUALIZATION"}</span>
     </div>
   );
 }

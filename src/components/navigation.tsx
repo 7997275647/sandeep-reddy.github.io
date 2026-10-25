@@ -6,6 +6,7 @@ import { ArrowDownRight, ArrowUpRight, Menu } from "lucide-react";
 import { navigation } from "@/data/portfolio";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export function Navigation() {
@@ -40,7 +41,8 @@ export function Navigation() {
             <a key={item.href} href={item.href} aria-current={active === item.href ? "location" : undefined}>{item.label}</a>
           ))}
         </nav>
-        <a className="nav-contact" href="#contact">Let&apos;s talk <ArrowUpRight size={14} aria-hidden="true" /></a>
+        <ThemeToggle />
+        <a className="nav-contact" href="#contact">Contact <ArrowUpRight size={14} aria-hidden="true" /></a>
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="ghost" size="icon" className="mobile-menu-button" aria-label="Open navigation menu">
@@ -49,11 +51,11 @@ export function Navigation() {
           </DialogTrigger>
           <DialogContent className="max-w-sm">
             <DialogHeader>
-              <DialogTitle>Explore the portfolio</DialogTitle>
-              <DialogDescription>Hardware-minded. Software-driven.</DialogDescription>
+              <DialogTitle>Sections</DialogTitle>
+              <DialogDescription>Jump to any part of the page.</DialogDescription>
             </DialogHeader>
             <nav aria-label="Mobile navigation" className="flex flex-col gap-2 pt-3">
-              {[...navigation, { href: "#github", label: "GitHub" }, { href: "#contact", label: "Contact" }].map((item) => (
+              {[...navigation, { href: "#contact", label: "Contact" }].map((item) => (
                 <DialogClose asChild key={item.href}>
                   <a href={item.href} className="flex min-h-12 items-center justify-between rounded-md px-3 text-lg hover:bg-secondary">
                     {item.label}<ArrowDownRight className="size-4 text-primary" aria-hidden="true" />
