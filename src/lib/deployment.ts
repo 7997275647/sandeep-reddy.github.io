@@ -1,8 +1,8 @@
 export function normalizeBasePath(value = ""): string {
   const path = value.trim().replace(/\/+$/, "");
   if (!path || path === "/") return "";
-  if (!/^\/[a-zA-Z0-9/_-]+$/.test(path) || path.includes("//")) {
-    throw new Error("NEXT_PUBLIC_BASE_PATH must be an absolute URL path, such as /Personal-Portfolio.");
+  if (!/^\/[a-zA-Z0-9._/-]+$/.test(path) || path.includes("//") || path.split("/").some((segment) => segment === "." || segment === "..")) {
+    throw new Error("NEXT_PUBLIC_BASE_PATH must be an absolute URL path, such as /sandeep-reddy.github.io.");
   }
   return path;
 }

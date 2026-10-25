@@ -3,12 +3,12 @@
 ## Validation performed - 25 October 2026
 
 - Production Next.js static export built successfully using the real
-  `/Personal-Portfolio` GitHub Pages base path.
+  `/sandeep-reddy.github.io` GitHub Pages base path.
 - Strict TypeScript, ESLint and `git diff --check` passed.
 - 23 unit tests passed.
 - 20 desktop/mobile Chromium tests passed on the development application.
 - The same 20 tests passed against the actual static production output mounted
-  at `/Personal-Portfolio/`, not a development-server approximation.
+  at `/sandeep-reddy.github.io/`, not a development-server approximation.
 - Automated axe checks found no violations for the tested WCAG A/AA rules on
   the page and project dialogs; the mobile menu was also checked.
 - Tests covered project filtering, truthful case-study content, accordion

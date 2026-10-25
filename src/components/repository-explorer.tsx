@@ -5,7 +5,7 @@ import { formatDate, type Repository } from "@/lib/github";
 export function RepositoryExplorer({ repositories }: { repositories: Repository[] }) {
   const featured = new Set(caseStudies.map((project) => project.slug));
   const otherWork = repositories
-    .filter((repo) => !repo.fork && !featured.has(repo.name) && !["7997275647", "Personal-Portfolio", "Personal_Portfolio"].includes(repo.name))
+    .filter((repo) => !repo.fork && !featured.has(repo.name) && !["7997275647", "Personal-Portfolio", "Personal_Portfolio", "sandeep-reddy.github.io"].includes(repo.name))
     .sort((a, b) => Date.parse(b.pushed_at ?? "1970-01-01") - Date.parse(a.pushed_at ?? "1970-01-01"));
 
   return (

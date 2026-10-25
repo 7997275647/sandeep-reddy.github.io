@@ -39,7 +39,7 @@ jobs:
         run: npm run build:offline
         env:
           NEXT_PUBLIC_SITE_URL: https://7997275647.github.io
-          NEXT_PUBLIC_BASE_PATH: /Personal-Portfolio
+          NEXT_PUBLIC_BASE_PATH: /sandeep-reddy.github.io
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
       - name: Upload static site
