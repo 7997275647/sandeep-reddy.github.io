@@ -8,7 +8,7 @@ describe("static deployment paths", () => {
   });
 
   it("normalizes GitHub Pages repository paths", () => {
-    expect(normalizeBasePath("/Personal-Portfolio/")).toBe("/Personal-Portfolio");
+    expect(normalizeBasePath("/sandeep-reddy.github.io/")).toBe("/sandeep-reddy.github.io");
   });
 
   it.each(["https://example.com", "portfolio", "/../outside", "/path?query", "/a//b"])("rejects invalid base paths: %s", (value) => {

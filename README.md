@@ -73,7 +73,7 @@ set `PLAYWRIGHT_BASE_URL` to its full URL including any base path and trailing
 slash. The test runner then skips starting a development server:
 
 ```powershell
-$env:PLAYWRIGHT_BASE_URL = "http://127.0.0.1:3101/Personal-Portfolio/"
+$env:PLAYWRIGHT_BASE_URL = "http://127.0.0.1:3101/sandeep-reddy.github.io/"
 npm run test:e2e
 ```
 
@@ -138,7 +138,7 @@ The Pages workflow refreshes data daily and on production deployments.
 
 ### Existing GitHub Pages URL
 
-Target: <https://7997275647.github.io/Personal-Portfolio/>
+Target: <https://7997275647.github.io/sandeep-reddy.github.io/>
 
 1. Commit and push the application to `main`, or merge the working branch into
    `main` after review.
@@ -149,18 +149,18 @@ Target: <https://7997275647.github.io/Personal-Portfolio/>
 4. Approve the `github-pages` environment if repository protection requires it.
 
 The workflow sets both the origin and repository base path; JavaScript, CSS,
-images, canonical URLs and sitemap URLs retain `/Personal-Portfolio`. Do not
+images, canonical URLs and sitemap URLs retain `/sandeep-reddy.github.io`. Do not
 deploy the source directory or the removed legacy HTML file. Deploy `out/`.
 
 To reproduce that build locally:
 
 ```powershell
 $env:NEXT_PUBLIC_SITE_URL = "https://7997275647.github.io"
-$env:NEXT_PUBLIC_BASE_PATH = "/Personal-Portfolio"
+$env:NEXT_PUBLIC_BASE_PATH = "/sandeep-reddy.github.io"
 npm run build
 ```
 
-A generic static file server must mount that output at `/Personal-Portfolio/`,
+A generic static file server must mount that output at `/sandeep-reddy.github.io/`,
 not at `/`. Remove those environment variables (or open a fresh terminal) before
 returning to normal root-path development.
 
