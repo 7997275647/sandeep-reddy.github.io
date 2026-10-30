@@ -4,7 +4,7 @@ import sharp from "sharp";
 
 await mkdir(new URL("../public/", import.meta.url), { recursive: true });
 await Promise.all([
-  sharp(fileURLToPath(new URL("../Images/profile_picture.jpg", import.meta.url)))
+  sharp(fileURLToPath(new URL("../Images/Bewerbungsfoto.jpg", import.meta.url)))
     .resize(320, 360, { fit: "cover", position: "attention" })
     .webp({ quality: 82 })
     .toFile(fileURLToPath(new URL("../public/portrait.webp", import.meta.url))),
